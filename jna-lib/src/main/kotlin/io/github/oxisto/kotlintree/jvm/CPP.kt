@@ -91,7 +91,7 @@ class CppParser : Parser() {
         }
 
         println("post-tree: ${t.rootNode.string}")
-
+        t.sourceCode = input.string
         return t
     }
 

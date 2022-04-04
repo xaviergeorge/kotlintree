@@ -225,6 +225,8 @@ class Tree : PointerType() {
     fun edit(input: InputEdit) {
         return TreeSitter.INSTANCE.ts_tree_edit(this, input)
     }
+    //  stores the parsed source code
+    var sourceCode: String = ""
 }
 
 open class Parser : PointerType(TreeSitter.INSTANCE.ts_parser_new()), Closeable {
